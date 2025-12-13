@@ -38,8 +38,8 @@
 
 ```bash
 # Клонируйте репозиторий
-git clone https://github.com/yourusername/telegram-monitor-bot.git
-cd telegram-monitor-bot
+git clone https://github.com/yourusername/telegram-monitor.git
+cd telegram-monitor
 
 # Создайте виртуальное окружение
 python3 -m venv venv
@@ -191,9 +191,9 @@ After=network.target
 [Service]
 Type=simple
 User=YOUR_USERNAME
-WorkingDirectory=/home/YOUR_USERNAME/telegram-monitor-bot
-Environment="PATH=/home/YOUR_USERNAME/telegram-monitor-bot/venv/bin"
-ExecStart=/home/YOUR_USERNAME/telegram-monitor-bot/venv/bin/python3 main.py
+WorkingDirectory=/home/YOUR_USERNAME/telegram-monitor
+Environment="PATH=/home/YOUR_USERNAME/telegram-monitor/venv/bin"
+ExecStart=/home/YOUR_USERNAME/telegram-monitor/venv/bin/python3 main.py
 Restart=always
 RestartSec=10
 
@@ -354,7 +354,7 @@ pip list
 
 Если возникли вопросы:
 1. Проверьте [документацию](README.md)
-2. Посмотрите [issues](https://github.com/yourusername/telegram-monitor-bot/issues)
+2. Посмотрите [issues](https://github.com/yourusername/telegram-monitor/issues)
 3. Создайте новый issue с описанием проблемы
 
 ## 🌟 Благодарности
