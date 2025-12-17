@@ -69,7 +69,7 @@ def get_next_report_time():
     moscow_offset = timedelta(hours=3)
     moscow_now = now + moscow_offset
     
-    report_hours = [4, 8, 12, 16, 20, 0]
+    report_hours = [16, 20, 0, 4]
     
     for hour in report_hours:
         report_time = moscow_now.replace(hour=hour, minute=0, second=0, microsecond=0)
@@ -120,7 +120,7 @@ async def report_scheduler():
                 await send_report(session_name)
             
             moscow_now = datetime.now() + timedelta(hours=3)
-            if moscow_now.hour == 4:
+            if moscow_now.hour == 16:
                 today = datetime.now().strftime('%Y-%m-%d')
                 for session_name in bot_data['accounts']:
                     if session_name not in bot_data['daily_stats']:
